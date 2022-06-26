@@ -1,0 +1,114 @@
+*::before,
+*::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+body {
+        background: #a6d7ec;
+        color: #333333;
+        font-family: Tahoma, Geneva, sans-serif;
+}
+
+#app {
+        max-width: 450px;
+        width: 90%;
+        background: rgb(198, 243, 168);
+        margin: 5% auto;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+}
+
+#todo-title {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 0.2rem;
+}
+
+#todo-subtitle {
+        text-align: center;
+        font-size: 0.85rem;
+        position: relative;
+        width: 100%;
+        padding-bottom: 1.4rem;
+        margin-bottom: 1.4rem;
+        color: #7a7a7a;
+}
+
+#todo-input {
+        outline: none;
+        border: 1px solid #eaeaea;
+        height: 2.2rem;
+        padding: 0 0.7rem;
+        color: #333333;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.20);
+        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        margin-bottom: 1rem;
+        border-radius: 2px;
+}
+
+#todo-input:focus,
+#todo-input:hover {
+        border: 1px solid #2cafc9;
+}
+
+#todo-input::placeholder {
+        color: #bfbfbf;
+}
+
+#todo-submit {
+        border: none;
+        background: #3a3df5;
+        color: #fff;
+        width: 100%;
+        height: 2.2rem;
+        border-radius: 2px;     
+        outline: none;
+        cursor: pointer;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2px;
+        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        margin-bottom: 2rem;
+}
+
+#todo-submit:hover {
+        background: #30b30f;
+}
+
+#todo-output {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.6rem;
+}
+
+#todo-output li {
+        font-size: 0.8rem;
+        padding: 0.7rem 1rem;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        position: relative;
+        border-bottom: 3px solid #6cb310;
+        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        cursor: pointer;
+}
+
+#todo-output li::after {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 50%;
+        right: 0.7rem;
+        color: #babebf;
+}
+
+#todo-output li:hover {
+        border-left: 3px solid #2098b0;
+}
+
+#todo-output li:hover::after {
+        color: #2098b0;
+}
